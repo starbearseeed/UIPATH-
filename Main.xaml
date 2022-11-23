@@ -1,0 +1,939 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1450.4,826.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="88">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Activities.System</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="57">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="400,185.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart DisplayName="INVOICE" sap:VirtualizedContainerService.HintSize="1033.6,1036" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="NAME_desktop" />
+        <Variable x:TypeArguments="x:Boolean" Name="BOL_check" />
+        <Variable x:TypeArguments="x:Boolean" Name="CHECK_folder" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">390,42.400000000000006</av:Point>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+          <x:Double x:Key="Height">989.5999999999999</x:Double>
+          <x:Double x:Key="Width">1000</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">420,117.60000000000001 420,143.6</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID6</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">90,263.6</av:Point>
+            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">190,356.40000000000003 190,398.8</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="1. 열린 웹 페이지 닫고 새로 열기  " sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="chorme과 EXCELL이 열려있는 경우 닫아주는 역할을 한다. " DisplayName="FOR" sap:VirtualizedContainerService.HintSize="433.6,309.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[{&quot;chrome&quot;,&quot;EXCEL&quot;}]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="STR_wed_name" />
+                </ActivityAction.Argument>
+                <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[STR_wed_name]" />
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">90,398.8</av:Point>
+                <av:Size x:Key="ShapeSize">200,62.4</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">290,430 340,430</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2. 로그인 로그아웃 " sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="INVOICE_LOGIN.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID0">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">340,383.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">440,476.40000000000003 440,536.4</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="3. 엑셀 데이터 확인 " sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="EXCEL_read_all" />
+                    <Variable x:TypeArguments="x:String" Name="GET_num" />
+                    <Variable x:TypeArguments="x:Int32" Name="INT_num_check" />
+                    <Variable x:TypeArguments="x:String" Name="STR_check_1" />
+                    <Variable x:TypeArguments="x:String" Name="STR_check_2" />
+                    <Variable x:TypeArguments="x:String" Name="STR_check_3" />
+                    <Variable x:TypeArguments="x:String" Name="STR_result_check" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1244.8,9856" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <Sequence sap:VirtualizedContainerService.HintSize="1208,9615.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="EXCEL SCOPE" sap:VirtualizedContainerService.HintSize="1145.6,9338.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                          <ueab:ExcelProcessScopeX.Body>
+                            <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                              </ActivityAction.Argument>
+                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="USE EXCEL" sap:VirtualizedContainerService.HintSize="1112,9242.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="[NAME_desktop+&quot;\교육02_Invoice Test.xlsx&quot;]" UseTemplate="True" WorkbookPath="[NAME_desktop+&quot;\교육02_Invoice Test.xlsx&quot;]">
+                                <ueab:ExcelApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                    </ActivityAction.Argument>
+                                    <ueab:ExcelForEachRowX sap2010:Annotation.AnnotationText="행을 기준으로 반복문을 돌림 " DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1078.4,8940" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;Invoice Test&quot;).Range(&quot;C:G&quot;)]" SaveAfterEachRow="True">
+                                      <ueab:ExcelForEachRowX.Body>
+                                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                          <ActivityAction.Argument1>
+                                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="ROW_excel" />
+                                          </ActivityAction.Argument1>
+                                          <ActivityAction.Argument2>
+                                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                          </ActivityAction.Argument2>
+                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="로그인 하고 인보이스로 들어간 화면 부터 시작 " AttachMode="ByInstance" DisplayName="BROWSER DASHBOARD TO INVOICES" sap:VirtualizedContainerService.HintSize="1044.8,8714.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" ScopeGuid="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V2">
+                                            <uix:NApplicationCard.Body>
+                                              <ActivityAction x:TypeArguments="x:Object">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                </ActivityAction.Argument>
+                                                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="LOAD INVOICE" sap:VirtualizedContainerService.HintSize="1011.2,8456.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign DisplayName="DESCRIPTION CHECK" sap:VirtualizedContainerService.HintSize="948.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[STR_check_1]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[ROW_excel.ByField("Description")]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign DisplayName="QUANTITY CHECK" sap:VirtualizedContainerService.HintSize="948.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[STR_check_2]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[ROW_excel.ByField("Quantity")]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign DisplayName="RATE CHECK" sap:VirtualizedContainerService.HintSize="948.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[STR_check_3]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[ROW_excel.ByField("Rate")]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <If sap2010:Annotation.AnnotationText="각 변수들에 들어있는 값들이 비어있는지 아닌지를 판별하기 위한 if 문 &#xA;" Condition="[STR_check_1 = &quot;&quot;  Or STR_check_2 = &quot;&quot;  Or STR_check_3 = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="948.8,876" sap2010:WorkflowViewState.IdRef="If_3">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="496,551.2" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ueab:WriteCellX sap2010:Annotation.AnnotationText="만약 3개의 셀 값들중 한개의 값이라도 비어있다면 결과를 쓰는 셀에 F라고 명시 " Cell="[Excel.Sheet(&quot;Invoice Test&quot;).Cell(&quot;G&quot;+(CurrentIndex+1).ToString)]" DisplayName="FAIL ERROR" sap:VirtualizedContainerService.HintSize="433.6,213.6" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;F&quot;]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ueab:WriteCellX>
+                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="433.6,32" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;excel value is empty&quot;]" />
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <If sap2010:Annotation.AnnotationText="만약 숫자 값이 들어가야하는 곳에 문자 값이 들어 갔을 경우 실패를 뜻하는 F를 결과를 적는 셀 값에 적음 " Condition="[STR_check_2.IsNumeric And STR_check_3.IsNumeric]" sap:VirtualizedContainerService.HintSize="948.8,876" sap2010:WorkflowViewState.IdRef="If_4">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="496,551.2" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ueab:WriteCellX sap2010:Annotation.AnnotationText="만약 3개의 셀 값들중 한개의 값이라도 비어있다면 결과를 쓰는 셀에 F라고 명시 " Cell="[Excel.Sheet(&quot;Invoice Test&quot;).Cell(&quot;G&quot;+(CurrentIndex+1).ToString)]" DisplayName="FAIL ERROR" sap:VirtualizedContainerService.HintSize="433.6,213.6" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[&quot;F&quot;]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ueab:WriteCellX>
+                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="433.6,32" sap2010:WorkflowViewState.IdRef="Continue_4" />
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;quentanty 혹은 rate의 값이 숫자 값이 아님&quot;]" />
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <Assign DisplayName="RPA RESULT CHECK" sap:VirtualizedContainerService.HintSize="948.8,71.2" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[STR_result_check]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[ROW_excel.ByField("RPA 결과")]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <If sap2010:Annotation.AnnotationText="사전에 수행된 작업은 실행하지 않기 위해 수행된 작업을 의미하는 p, W, F &#xA;가 있으면 continue 되도록 만듬&#xA;" Condition="[STR_result_check= &quot;P&quot; or STR_result_check= &quot;W&quot; or STR_result_check= &quot;F&quot;]" DisplayName="IF AREADY P IS EXIST CONTINUE " sap:VirtualizedContainerService.HintSize="948.8,496" sap2010:WorkflowViewState.IdRef="If_2">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,155.2" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK ADD NEW" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/list/all/client:/profile:/search:/page:" DesignTimeRectangle="1723, 205, 169, 46" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Add New'" FullSelectorArgument="&lt;webctrl aaname='          Add New          ' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Add New          ' parentid='wrapper' tag='A' type='' class='permission_create dropdown-toggle main_button ccfg_button_primary' check:innerText='Add New' /&gt;" Guid="2138f27b-3172-4e83-80ec-c58fce012268" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK0AAAAyCAYAAAAun1vVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANnSURBVHhe7ZrBihQxFEX9JxH8EVcuRJER1B9w5UZQcRZ+xmzc+A+NIG6F3s2y98KAu/iSvq86lXpJV9Ci8+ReOExP6lUq3XWSSo/eCwzjLJSWcRdKy7jLSdrDbQifX4VwdZ+Qsbi+OvqJnKT9+Mw+gZAReP8EoubSvnxoFxMyAi8eQNRcWquQkJFAKC3xA0JpiR8QSkv8gFBa4geE0hI/IJSW+AGhtMQPCKUlfkAoLfEDQmmJHxBKS/yA+JD25gcG+UteG8ebfD2eur82jpWsqUVNuDWOAR3vqmuS1SA+pN2LrJqDSGPVVNlKWkltLJR2GxAH0sqNv4sDFHHTz8YKZ7KhtDE7o4bSbgMyvrQ7/I/1KED+2qo12UjavfzUyVRuWSjtNiDjS3uIg1MxIMydSGHVlqtgzK4mYk9tTlajcpbjqUorvyfRs+Q1aRtkTILUbjxh0mfT++RxDDK4tBAkl2ImcUZNlFRftPfULijEtlZ/q39tm20n5HiUeNobW5MGNbX2WdsKvmAcZ/M7hO9v7D4uBTK2tPoFLL/RevNnX4JwA80vRqUIPbUWRo3KruNcSItrmv2iPz039pVP0tSXTIz4WSzajcm7Bh1fNSLs7rV97iVBBpYWN3rx+LPaW7KVx3pqLawatOmYSmn1d+tLWzmJ0sqdyRhljcdKSUuJe6mKO6iwEWRcacsbn1OuwE0pCsl6ak0qNbpNmASTaI0ea2Va+fP+hSh0Gite5+3m06KDhbgDCxtBxpVWH7mtTCtNRSTzWE+tRaNGJ9O+kLY5UQx0i5DOy54ourr29tdiEndwYSPIoNJCjNZKkgQR0uNS5KiuPKVkPbUWrRr0rVl1TYO0MgvxPebnJMFiW3zvmcx/y81ufGEjyJjS6uO0tZLoClGuZqVM1l8EemoXnBF7Wrkk1jXL9xTbFzLjGjGzeulPJ8XaCfA/gQword6wcyuJ3kBdbSPZzdZs+Xda87gwbRPKGh1zHqmN/1AxqxPSBDI+A+37X2wNvIGMu6clpAShtMQPCKUlfkAoLfEDQmmJHxBKS/yAUFriB4TSEj8glJb4AaG0xA8IpSV+QCgt8QNCaYkfEEpL/IBQWuIHhNISPyAnad89tgsJGYG3jyBqLu3PbyF8em6fQMgl+fD06CdykpZhXCSEP52ET0DH2sFnAAAAAElFTkSuQmCC" InformativeScreenshot="1179ed0cdef3e771ff60d4bccf60be43.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK INVOICE" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/dashboard" DesignTimeRectangle="1704, 260, 164, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Invoice'" FullSelectorArgument="&lt;webctrl class='i_new_invoice' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='i_new_invoice' parentid='wrapper' tag='A' type='' aaname='Invoice' check:innerText='Invoice' /&gt;" Guid="fcbc07dd-9594-40ff-8356-b46d5758011f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAA2CAYAAABTJ9KHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOwSURBVHhe7Zq/LjxRFMf3BTReQKIRlVYjUQhaDd6AF/ACKo1KI9GIKLdQKTSsqEQiGqxEQtavQZQSf88v3zEnuXsMk92ddQ/z/STHzt4598y9M5+9+8dUnp6epNG4kaOjI9nf35darcZgRA14CB9vbv5J5fr6OjOJwfAQlcPDw2SjXq8LVlNCYgMP4WMiqL6tPz8/p7sJiQ8kTQTFHwQh3qCgxDUUlLiGghLXUFDiGgpKXENBiWsoKHENBSWuoaDENRSUuKYwQd/e3uTk5ER2d3dbisvLy7QCIZ8pTNCtrS3p7++XsbExGR8fz42RkRHp6emRvr4+2dvbS6sQ0kxhgi4uLsrq6mr6LJ/z83OZnp6W9fV1GRoaoqQkk0IF3dzcTJ/lA0FnZ2fl7u5Otre3KSnJJLqg9/f38v7+TklJJi4EBZSUZBFN0KurK5mcnEy+yUNSjY2NDRkcHJTj4+M0sz0ODg4S2fFCIL+XaIK+vr4mMvb29kqlUvkUEKwTYguKF9vExITMzc3J4+Nj2kpaJZqgX4GLiYv62wUlxVAaQfGI52jHOHWl1hxd8TAPi44pXA21nq2jaB9bD8fXPggcE8cOCceHKOK8/lZKJ6i94Bi3imf7KLZdJQvHaNuyBMW2FRJjCcUPx6OgLaxTJkonqK0b5ukqaucRSqPjy5or2lRAzVOx7HiyQE7WiqrjsmMvA1EFfXl5kWq1mnyjV2IKCjAHlRFYOZCHf9VmiRbus4KGkn8FcjTf8t2+v0w0QSHn0tJSckHDG0ZiC2rzwlUR2PyQsG+rgmq+fu7MCgraAa0IGsp5cXGRtn4QW1CAuSB0LOG8kBdjBS0rPy7od3ICD4KiDasm7tCy+7KkVcLV1gqadRyLHtd+Bi0zXRV0bW0tucMJUoI8OYEHQfVz51dvq+iDfWEt22YFBdi2AuKc6XnTPghsKxjbwsJCU1tZ6Kqgp6enMjw8LCsrK8nJzZMT6EUKL347oH+7ggLMxUoYEkqMsDV0HlZw1NM+CNTY2dlpkk+PrYHayGk0GmlGeeiqoEAlHR0dzZUTFCUo+Rt0XVCAlWV+fj5XTkBBSciPCNoKFJSEUFDimkIFXV5eTm487oSHhweZmpqioCShMEEh1MDAQNO3z3ZjZmZGbm9v08qkzBQmKMDbM35+6SSwgurvpoQUKighRUNBiWsoKHENBSWuoaDENRSUuIaCEtdQUOIaCkpcQ0GJaygocQ0FJa6hoMQ1TYKendUZDDfxIWhN/gOfxMf+TLVCogAAAABJRU5ErkJggg==" InformativeScreenshot="7c6032c951c8601001d84598361c2963.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboard - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.PointOffset>
+                                                          <uix:PointOffset Position="TopLeft" X="65" Y="19" />
+                                                        </uix:TargetAnchorable.PointOffset>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NClick ClickType="Single" DisplayName="SELECT CLIENT NAME" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="374, 906, 438, 44" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' tag='INPUT' type='text' aaname='' /&gt;" Guid="41c7549b-e66d-4e7f-8e38-9085b307c13a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAwCAYAAABnq7+PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP0SURBVHhe7dtLbts6GIDRu+lswqvwSrwJD4o7aZPekeftIOhFVFEUVYl6WEocP9hzgH8Qy5YoBeBXB+g/FQAUTOgAKJrQAVC0LnSvr6/Vy8t/1Zcv/xpjjDEPO6FloWlJF7pv314mP2CMMcY82oSmJV3o0sFfv/5vXwGAxxIalnqWjEIHAI9M6AAomtABUDShA6BoQgdA0YQOgKIJHQBFEzoAiiZ0ABRN6AAomtABUDShA6BoQgdA0T4YulN12D1VT09zs6sOp/atd+q4n1j37lDfWet0qHZ3dx/Hap+vM9Pc18JxgL/FZUK3P7Y/f1TcwC92uiXHfYza6GJtRFLc8tC1n9t9UvlOh92KQKU1zq9D6ACivzN0TbyWYnWqjsdjPfXxK3+j2xq6MFPPS+gAoiuFrve+NjJpk06xaTb43uujP3umb2Bp8ms2x/d1AtprLWzymyKQh65df375fP2jiDbri+cZ/rk0rLl5wyBezcw+1/je3eEY77U7xx9T9zi87szx0e8o3fv5uJ59BgA3cN3QhQ2wv7n2Nv9o+htd3ECHm/nom097rt0uC+RIisTKTXhF6GajMnxTvP/BZ8fPb3Rfk/r30AZo6vq910brqU2+JztXfE/9XHvPf+r3kZ8rmLomwLVdJnTtBj6etBnOBTGPzkTo8tB04jm7z46iOWPmG9msc6Frrjv+RjW6l5n15dHYHrrwY4xoP95T4RnJ7m0qTFNRyz+3+hkA3MBlQnd2J3t/6JY2/sGx2c02c+HQLX1rGRz7zNDV4nmydQ3Ok/2jJBy7UOhWPwOAG7j70DUbZdqcp2Zr6CYisWgxdFk8pibdzCeH7s9a4rmGoRsea7T30V/T+0K34RkA3MDdh27dxl9bHbo8Amcshm46DpM+PXS1FK96PYN7zNbcye7tfaHb8AwAbuDuQ5dvqrM2hC5t/PPf6sJ/L2iP5ddvP9utce11rxG6oLlO/azDXCl0m549wJXdZejiz6fq1N+ARxtpeG/vta2bbbv5z60phKJZR76pj6LR3lsep/C+/mtbQtf+fEoPYGQhdLX4vIZral7L1hjfd4HQrX0GADdwmdC1YRhP2gzXhi7sjWFjjZ8fbOT9byrt7Jv/1N0/viF0rS4K/elvzmdDF/XXHaf+TFhf+tzK0KVnEs8xdz/LoevOMYjM+He1Pwzv7f2hi84+A4Ab+GDoAOC+CR0ARRM6AIomdAAUTegAKJrQAVA0oQOgaEIHQNGEDoCiCR0ARRM6AIomdAAUTegAKNrZ0L29vbWvAMBjCQ2bDd3Xr8/dQWOMMeaRJzQt6UL348fP6vn5++QHjDHGmEeZ0LLQtKQLHQCUp6p+A/mJFCVmn6qsAAAAAElFTkSuQmCC" InformativeScreenshot="95f788945191bff5025aafbc75dd9034.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target DesignTimeRectangle="374, 870, 18, 21" ElementType="Text" FriendlyName="'To'" FullSelectorArgument="&lt;webctrl aaname='To' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='To' tag='LABEL' type='' class='' check:innerText='To' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACKSURBVEhL7ZLRDcAgCAW7k2sxitMwims4xGuNVdE2bagh6YeX8CN4KrjBiCWuLHHFXhyZ4Jx7DmLEs/4Ne3FPBFOW+XAuKfkkDl68IsVNkVIc4KWwC39kGypxm4OUtFp5c4W4rBF4nGBk0HCgQlza0D85c8394cZpv0mPE0a/ojDxj+dZ4oqRGNgBIUzOcnjDEMMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK CLIENT NAME" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="383, 706, 418, 49" DesignTimeScaleFactor="1.25" FriendlyName="'song minju'" FullSelectorArgument="&lt;webctrl class='autocomplete-suggestion' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='autocomplete-suggestion' tag='DIV' type='' aaname='' check:innerText='song minju' /&gt;" Guid="3224fca3-6bad-43e1-aa5f-7a929c282710" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaYAAAA1CAYAAAAK9E9aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALNSURBVHhe7doxThtRFIbR7IldsAZYAQtgE6RmC6SmS0pKUkJFSjrSQe/od3TJ48kOliKNb/ApjrA94zemuZ/e2J+en19WANCFMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijAB0IowAdCKMAHQijD9o4uLz6vT09PV4+PjxuOzu7u71fHx8erq6svG4wCHTpgAaGXxMGWncHR09GreOWTnkR1IHT8/P189Pf18PX5zc7N+7fb2+3rnUefl9XGd2pmMx7O72bZTyTWybp03vm/8TFkza9f7sl7Oz+Ocd3Z2tv5sWavWqOPjObVG/T/j/zifA3BIFg1ThvB82ytDO6/nccWknkcG//ieHMuwH4f5vO6mdSo274Up59T76lrj2llnDM0cppw7xqteqzXzXJgAtls0TBni8xAezUM/KhgVlF0G+bbrZO33wlQBiayXdbN+vTavnedjmDYFZbyuMAH83aJhysDN7iG7kHn3sikMZRz+uwzybQESJoD+9vbjhwzqxKlue2UYj7e85nN3DVMFpkIwEiaA/vYWpjIO7TyuIV/m0OwyyOd4lPFas7qOMAHs1+I/fhjDMMcgg3iXHz+8N8g3rZPH8+3D0b7ClL8nJydv3pPzxx9QABySRcP09eu39VCv75g2hSKDe/weao7QLmGKPM5wr3Uy7MdAzPYVpsix+pxxfX29cR2AQ7D3W3lLqfBsC9NStsULgN8+ZJgy/LNLmXda4y3BpT08/Fj/TZDmW3cA/PEhw3R/f7+6vLx8c3tsn1Gq3Vp9ln3v2gA6O5hbeQD8H4QJgFaECYBWhAmAVoQJgFaECYBWhAmAVoQJgFaECYBWhAmAVoQJgFaECYBWhAmAVoQJgFaECYBWhAmAVoQJgEZeVr8ArSmqsDGTaN4AAAAASUVORK5CYII=" InformativeScreenshot="bb78b90f7466f42861a76a1fb62b4231.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="TYPE INTO DESCRIPTION" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="948.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Text="[ROW_excel.ByField(&quot;Description&quot;)]" Version="V3">
+                                                    <uix:NTypeInto.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="377, 599, 628, 69" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl name='statement[item_name_description]' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl name='statement[item_name_description]' tag='TEXTAREA' type='' class='item_textarea' aaname='' /&gt;" Guid="b37dc202-15f1-4961-a5d1-57381a9b9f2e" ImageBase64="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" InformativeScreenshot="8b90ccf44475ba697bb55304c9be1cff.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target DesignTimeRectangle="374, 551, 639, 33" ElementType="Text" FriendlyName="'Description'" FullSelectorArgument="&lt;webctrl class='item_column_heading' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='item_column_heading' tag='H2' type='' aaname='Description' check:innerText='Description' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAoMAAAAlCAYAAAA5tONUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALXSURBVHhe7dvdjeIwFIDR7WnaSilUQyk0MQ8UkU3ATvwTQ1hG2jA+R7rSLARj9umTA39GAAC6JQYBADomBgEAOiYGAQA6JgYBADomBgEAOiYGAQA6JgYBADomBgEAOpbF4OX0NX59bc9wvoarjuV6Hn5wf9fxPMyfdxgP+nEBAH7U7hi8z/Eiadnz6RIe2SuG32lcX3kZT+GzvrwcAMAH2ozB+pRtjaQ8nj7ZVgwCAPRlZwzOYjzVz8dbtctsHKtVp47DeVox92id7Hbw5XT7e366uk0cnru99noeh/nvMMty8Zp0bvtp3yau9l98xmwfrfcFADiYF2JwEiNqCbk1EKtJYq8KqX+4pgrFaR7G4DBkQRYnjclsmjGYnoqWs54qLvuY3re+zncQAYBjei0GlxOvEEFLVOW3WvN1YkyVt2On9Ipvs6yTR9O8zml6YH5ojcH8mmYMNq5b97F1m7iOwfp1sySCw7Hf9v7W65wOAgBH9FYMxuvr0AkBGE717tflcZZqr7Oqoi9oxmC1WBl6e2Kw/Hei+L94tj8xCAAc0Ru3iddTr+Ykt4HXeCqfexBcifdjsIzOPTHYOtWc5c+JQQDgE731A5I9J3rb8hBzMggA8H/si8HsVC+Jp8b3827XL/UTgiqroSKyGuvM+4kvezkGi7Xidev+98Tg1utm8bppwgaf7U8MAgBHtBmD7SmiL42ijbkFUHl7OJ3kNnL7vfedvFUx+OjXxDfF3rNb3+nnfPHXxI39iUEA4Ih2x2AZOakYPOukp2h31drp9wmDap2koJ7FVhWD82uLEK2CLHt+DsCtGLyr9l8s9mx/YhAAOKIsBn+FNAYBAHhIDAIAdEwMAgB07PfFIAAAu4lBAICOiUEAgI6JQQCAjolBAICOiUEAgI6JQQCAjolBAICOiUEAgI6JQQCAji0x+P39bYwxxhhjOhsxaIwxxhjT8bhNDADQrXH8C6JVQp39pBf6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NTypeInto.Target>
+                                                  </uix:NTypeInto>
+                                                  <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="" ClickBeforeMode="Single" DisplayName="TYPE INTO QUANTITY" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="948.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Text="[ROW_excel.ByField(&quot;Quantity&quot;)]" Version="V3">
+                                                    <uix:NTypeInto.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="1020, 597, 93, 44" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='statement[item_quantity]' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='statement[item_quantity]' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="fa3e524f-7c41-48d2-93df-79a68b906fd7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAwCAYAAAAB1BTxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJLSURBVHhe7ZZLbsIwEIZ7aS6RU+QMHCCXyAJ1w6NdZU8XiAo3fozxK8S02Bno/0kjtfY4seezHd4EWBxIYAAkMMBKOJ1O4nD4FJvNO6JwyDrLehNWwm53SA5AlAlZb8JKoM7z+du0gBLI+lKtiUgCKA8kMAASGAAJDIAEBkACAyCBAZDAAEhgACQwABIYAAkMgAQGLCOhb8VqtfKj6cRguv8blSUMomtk0VvRmxZi6Bolow07qtOLNphHPLc45y9UldC3t3e8XmwjukWPRE6Bn1WCuYJuT9ycFJsU/k/oIjSureiKC2QOnWjM+2lnh3l+u9Onnq3/TuWs1zc2j5nXLapJ0JOPr6EQPy9Tglpo8GyncAojQRbElRefzsQuD58V5UzNc6rdp5qEuavI4i34jpMQocfaHOckeMwWeCQjJ7nJ1DvdcWleRoJ/TcjxdSWk5pS75moSSl5HJOCaZsa5RSkuQaa5RU/npKgmYbIIpl0XOix6joSpHN1eU4L7jtxNJ6knYWTyeKpFjn0q3MU+mQQ7l85/9wxVJdhJJnaIvdMDSUpckK/bnEVGRRoxYn8rgQSPn5a8HMK8N/cUSCpLMNiJOiGr411NBIm7Rtu7RdBYiRThbsyW4D9Ljc/Jsei5xSdzmmUkvDJKdnAqZ4CEB6NOSM5PcQdIeBD0nbrnW0BAAgMggQGQwABIYAAkMAASGAAJDIAEBkACAyCBAbMSLpeLaQElkPWdlLDd7m0nonzIehNWwvH4Jfb7j+QAxGND1lnWm7ASwFII8QPvrRtIuUFH3QAAAABJRU5ErkJggg==" InformativeScreenshot="8b3051e1d2de1b3bafe6a76725d0cd2e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target DesignTimeRectangle="1013, 551, 106, 33" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl class='item_column_heading' idx='2' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='item_column_heading' type='' tag='H2' aaname='Quantity' check:innerText='Quantity' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAAlCAYAAACjxNxUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAImSURBVHhe7ZbtkYQgDEC3J9uiFKqhhevAJvaHRXB8BYKEG8VzMbN5M5m7RRTIg+jLCiwRcUwRcUwRcUwRcUwRcUwRcUwRcUwRcUx5gLjNGrXYZalDr+nyI4E5K2u21PRhporbjGqE1aHtfH+r1X4uyjhdQGpzkTfYqsNv9SGT88SlhYbYH6/NWAXXqoTNgBJH8B3iyo7tLhTJi1575Qnad6cTb4wQnevh4WU+PmBOZEUI/fFcOqX+B+ZPVI08t/GKMkfcwYnnxDXJitcjrbhV+99UoPFgDkqV043CD3lJHLo/3IKA+e3bzzBX3MHyE/sdFed6GndflZWS3NycN0+dQEhqqQRUqSTmkp5XVRCoGvheqm2AKeLyTr5FHA2MmRMLz26PQ93vijhH3AilXzOPQeacuPz+opLtEpWSlAWH5J4Qhz9u0jhmkrh6nGOb7AgP+zgp7YvW+f+Y24PiyE1BjPcpcXh+vTEHmCTOAYtoFgILTYES1r5/vKd0KkFUJzmzSqWnzHF3zwXmiXPUC+oESizd330V4hOXTxc+cT6vsf+wOIjQvy8Oon4seka1AcaZKi6yO2Ep9FoWW5JAnUZoQ6Kad5wT4T77w9/T4hyVFD8OIc4Bm4N6LlzbDzfKA8R9AX9+jI0h4m6lLrPU+28UEXcnuMT+V41MiDimiDimiDimiDimiDimiDimiDimiDimiDimiDimvN7vt5XgFyKOaUipZIm1v7lcUiqtXHfmAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NTypeInto.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NTypeInto>
+                                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="TYPE INTO RATE" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="948.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Text="[ROW_excel.ByField(&quot;Rate&quot;)]" Version="V3">
+                                                    <uix:NTypeInto.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="1126, 597, 105, 44" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'0.00'" FullSelectorArgument="&lt;webctrl name='statement[item_rate]' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='statement[item_rate]' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="0a9a0c80-97d6-4421-b392-4182601521e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAwCAYAAAAb6PR/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGzSURBVHhe7dZBboMwEIXh3olr+SichqOwibpJoF2yTRcoFS4TjMHYM+mmKk96n+RNTFrJv23y5gkOowFiNEAx2jiOvu8//eXyznHCIW2kkYjRbre++DDHeYY0EjHaOvF4fIdP6CykydpHZNHonBgNEKMBYjRAjAaI0QAxGiBGA8RogBgNEKMBYjRAjAaI0RRtXfmq2kbdhgnL0Hi3+07lGj+EqaOhccnfd432ZI7RMoNv3LyQSaXW168Wtq3nxXd+/8gSpp6/nXpuiCRo6X/qGO1AW+hSlI0WtRBD+zvhlP6mG6MlrB1vzFlBD3P5KdtYc3uMthd2u3YNaou6vP8Kp1MkJ2g5kdo1qJ7yA0bbe3FFaXHME5JsBPvduETTruANo+0xGqBkgXNaHC3mU7IReD3+Af4QgcSf/JBKJ8p+Fz0VYmgbID9R1gnPMZpieU9tI1nPcCqyq2z9fB3GVbcE3Z41N8QBowFiNECMBojRADEaIEYDxGiAGA0QowFiNECMBojRADEaIDPaNE3hEzoLaVKMdr12cYLjnEMaiRjtfv/yXfdRfJjj/4e0kUYiRiMU3v8Aq9dpsqSK+PAAAAAASUVORK5CYII=" InformativeScreenshot="48a0e37d60af6ceffa373f162195f04f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target DesignTimeRectangle="1119, 551, 119, 33" ElementType="Text" FriendlyName="'Rate'" FullSelectorArgument="&lt;webctrl class='item_column_heading' idx='3' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='item_column_heading' type='' tag='H2' aaname='Rate' check:innerText='Rate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAlCAYAAABiQ5b4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF2SURBVHhe7ZfRrYQgEEW3J9uiFKuhFJvwgyLmoTIKgmRczcsm957k/sDgJntg0I8QGCgbCMoGgrKBoGwgKBsIygaCsoGgbCAo28g0DjIMFxmnVPXbULaRruwlzktItSamcV3n/K1Vj6BsIyq7kpOkLbl1wCn7d7mUHanngni3jWl6c0vyjRK8K+dfuiYo24hZdvDiclFZtrU92e25NXeviQaUbcTcxsMko3NSlGlNLqzVxvdnjZKf5d5GuwNlG9E//DLdVhs3wFqXSWzI1t+oH5XWPzzdlG2kJ/t84s61znuD7E4L11D2/1C10v1uLlt2VRc5Xri+PdnvQNlGuhL3E6en83RnG9u4jlXrl431wg6gbCMt2YfcY1w3QFG3d4FatmZz2W/lT31TtpG27Ej+qZVsaO2e+HZeyY4UdZnJ6jv7tO5bKBsIygaCsoGgbCAoGwjKBoKygaBsICgbCMoGgrKBoGwgKBuIzzzPwmCEsoHCNg6DyB8G0PEdKs5ZOQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NTypeInto.Target>
+                                                  </uix:NTypeInto>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK SAVE" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="1702, 205, 169, 46" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl aaname='          Save          ' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Save          ' parentid='wrapper' tag='A' type='' class='permission_create dropdown-toggle main_button ccfg_button_primary' check:innerText='Save' /&gt;" Guid="d01fc863-10c3-4400-b602-0fde3130223a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK0AAAAyCAYAAAAun1vVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKNSURBVHhe7ZrBihNBFEX9JxH8EVcuRJER1B9w5UZQcRZ+RjZu/IcgiNuB7FxmPzDgrqzXcyuprryexBkG+1WfAwcmneoOgdMvlTAPEkAwiBbCQbQQjn20298pfX2T0tlDxHl5fnbdp9hH+/mFfwLiHPz4TKHW0b5+7C9GnIOvHinUOlpvIeKcFESLcRREi3EURItxFESLcRREi3EURItxFESLcRREi3EURItxFESLcRREi3EUC4n2u95kwzYfd9fjLBX9R7u2/8O8TGnVPqeQr341x3G2is6jPc9R5vfGRO1D0Xm0mqZE24diGdEO5G2Cu6ZWk3lEtbXY5L+NdX1O0dtuONfb5GOj8/BkRf972hLaCG+Pq8DaqEZ7Yq3xJvfwOtV1VzleYxT4Decf85uud5Q/Kf18518juqL/aM0hPI9Tpq8maInZ/WLXxqjH7lTV9dxpfcRyI0ySg12/9c/tQbGMaGu3er+FGz/OLeom2oPH2XJTlBDdKVvUa9x2nz0ZbufBmmJ50RZ307dM2xJseWwqUKOOdNgKVOvsRqjjn5zsFXf5cngQ7gKCNcVyozWHqauP+snp6EzW0dpjz9+Tu3AXEqwp+o92VcXUWk/If4nWLOe2U3cwr73LFuBUV+vlBGuKvqMtH9Ojfas8iFShtWvLrw9ttPUWoH3OnLoJ7Ph9x9yrou9obcruPkZb2uloKtyajc4/CLOsbX9JqHWuZ+s3RHsrxbL3tBhLQbQYR0G0GEdBtBhHQbQYR0G0GEdBtBhHQbQYR0G0GEdBtBhHQbQYR0G0GEdBtBhHQbQYR0G0GEdBtBhHsY/2w1N/IeIcfP9EodbRXvxI6ctL/wTE/+mn59d9in20ACFI6S/brGw7+SuF+gAAAABJRU5ErkJggg==" InformativeScreenshot="dd6183fe6ca6b64f0615d3a698affc41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK SAVE" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="1704, 260, 164, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl class='permission_create' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl class='permission_create' tag='BUTTON' type='' aaname='Save' check:innerText='Save' /&gt;" Guid="ccca2c3c-6e4e-4608-8d4a-957143069cc4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAA2CAYAAABTJ9KHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJISURBVHhe7dYxbupAFIVh74hdwFLYB7ugZwFswYgKIdFCCSEdNRI083R4HDQZOVESO+Ia/Z8078FgO83PHarL5ZLe3o5pvV6nxWKR6rpmsZ661KF6PB7fU7Xf7xsvYrEirGq1Wt1e7Ha7pGkKPJs6VI+3QH2sX6/X+8fA8ynSW6D6RwuIhkARGoEiNAJFaASK0AgUoREoQiNQhEagCI1AERqBIjQCRWgEitAIFKERKEIjUIRGoAits0C3220aDAapqqrH0nvtA7/VSaCz2SyNRqN0Op3uO/9NJpNbqMvl8r4D/EzrQBWl4lSkQNdaB+qjXdPyOzxVvcbjcTqfz4/Pmiax6AuQ/2TwF8PP+ew+9FvrQBWXInMoXx3nCrAMWe8d6WfTuNz3lyL/W9obDof85n0xrQMVB+NIvb5z7Jdh5cGaQvT09Bei6dnaK+9Fv3USqJXHrlZ+9JbTVq83m82HQMtgJZ+8TZ/bV5+hnzoNNJfHqsnmOPNgFZImY/7b0tflQebHuf534E0rfxb6788CFUeq2MrQTPvl1NM1Drk8tpuux+vqJNDD4XB/9ZEDVWQ/CdT3zefzx/3mCZvv4XW1DlSh6GjNp5xpcnoS+n15nfaajmXt67n5/eZjvoxd95R76LfWgYonnn8HeimYnKdffs10Om08sj1xy2dY098k0NfTSaDAXyFQhEagCI1AERqBIjQCRWgEitAIFKERKEIjUIRGoAiNQBEagSI0AkVoBIrQCBShEShCI1CERqAIjUARGoEitLqu0z/Lg45TnUz8QAAAAABJRU5ErkJggg==" InformativeScreenshot="9b59d51cfa11f830b0c6d97e6e01274b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NCheckState DisplayName="CHECK CLIENT ERROR" sap:VirtualizedContainerService.HintSize="948.8,638.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Timeout="3" Version="V3">
+                                                    <uix:NCheckState.IfExists>
+                                                      <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="496,410.4" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ueab:WriteCellX sap2010:Annotation.AnnotationText="만약 3개의 셀 값들중 한개의 값이라도 비어있다면 결과를 쓰는 셀에 F라고 명시 " Cell="[Excel.Sheet(&quot;Invoice Test&quot;).Cell(&quot;G&quot;+(CurrentIndex+1).ToString)]" DisplayName="WRITE ERROR" sap:VirtualizedContainerService.HintSize="433.6,213.6" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[&quot;W&quot;]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ueab:WriteCellX>
+                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="433.6,32" sap2010:WorkflowViewState.IdRef="Continue_5" />
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfExists>
+                                                    <uix:NCheckState.IfNotExists>
+                                                      <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="400,116" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfNotExists>
+                                                    <uix:NCheckState.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/new" DesignTimeRectangle="309, 364, 1225, 52" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Please specify'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='alert error dynamic' aaname='Please specify a client/vendor.' check:innerText='Please specify a client/vendor.' /&gt;" Guid="bb9fb92e-900a-4228-9ddf-fadefe48207c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABM0AAAA4CAYAAADuOg9BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAdgSURBVHhe7dzPat3GHsDxPmMXfYsuCs1bFPIaIW9QCiGL1F3WcV+gJSaQkk1wFoUWVI3+HM38ZuYclcb2sf1ZfLjkaCTNjHQX94t8v7q5+TwAAAAAABvRDAAAAACCMpp9+HO4eXs13Fz8Mtz8+BMAAAAAPG6pg6UelrpY1sm2aJYOvLkY/nr72/D3738M/7y7BgAAAIBHLXWw1MNSF8vD2RbNLq+mAa2TAQAAAOAxm8LZ5VUjmv38iy/MAAAAAHiSUhdLfayOZj/+1DwBAAAAAJ6C6f/jTDQDAAAAgI1oBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAY9r54P7757OXxqHQMAAAAetbuNZpcvh+uvvxnetfzwOox7Nny4zM7li/n04lm298+Hj40x9+XjD+FduEdpLu9ftY/dl+nZCXkAAABw6+4lmtUh4vXwPg9notkXsuxrHlnS11NnvLdlNLsaPnx3m2Fvvv71i6vGsbR35xUUE9EMAAAA7saZRLNRHnNEs1szf2V2fjFodbdfmh2JZul9PJMv3nKiGQAAANyN84lm+bFeNJvCWvryaNGKGnFM4zrlnyeOmnFk+UrrYE9oiueEex/C4PoF1aITQeI8219EhWsV45Zj0/rqce++/3b8z06cXPax/+eJjevtjUzVM9r2Nkaz6d/V/sR7xzVk617eq3XsYW+qOZRrPfxp5nJ+/2u08dxsvief2eEdWNZ2GNt4v8Ic03za0Sy+d/VzO+zr0fUAAAAAqwfzpdkcI8qwUAWE6RohPuTXHf/dig7Vb615NuZUmsNFubbw2yGClNeZ40k571YsOoSP9bdmAMnvmUez+Xi5j/XxWe/38nh531PnzFprzfc/rrHeh3l9/TUny1zSXufnhnehvY4kXW+bY7lnm/j7rmd2eAca883GzdduvSfhHq13oPHbPLdnw3WYHwAAANB2JtFsjh6HaBADVfz3QS965MoxVcSo9K+Zx514rD/HTBVtViEETePqSFPGoTq01Hox5kQQ2rOWlu68F931b+LzmWPPtufd51fcu7c3YZ97zzpdKz+3+d6Ge+x6ZqPOHpTPIc4zjNu9H9t94j4CAAAAx91LNFu/tClUkWL7H/zHYlU8NseH9brpGmUYyY/X8W50LBgdjUlz6Jiu3YsTnWCS5FGjG0LyY82QE52OZq1Asy+wZOtN0j264Wi257px7eU5IUAV8mP/L5qle8Z7xHnFd6E6nimO7YlmR96z8n3fux/H5wcAAADUzuRLs6AVJMbzupaIsAax7fpLPBl/K8LIFC7ya2SBojoWtWPGbLvfQR4qdkWzxjWidM0vFs3ye6d/Hwsxq3nMds7osG+3GM2WNVf7kZnnXa97tieapTGNNYRnV65l5zNrXGdVPJcj70kRzY6+A+Va474CAAAAxz2IaFZ+XdPTCyWtMJJZQ0wRItrB4r+aQkW+3l3RbGfg2LWX9Z60oll+rebxqLeO6fdbjGa7gl7Sexd2RLO0hube52Preex6Zkln74p9P/IOlv9dOLYf5bHd8wMAAAAmDyKaHYsIm14oaYSRqIg9O8bvFq7Vi00x5pyIT7PeenP1mHYUW8e93Lf23jpOzbu7/s3xaLY3/vT25nQ0S9fvvZ9rsPrY2sNdz2zU2YPyucR5hnF79iPcZ9++AQAAAKuHEc1G0//or6JEigvZb60gMf22BYh0nRgjqqCwnBPnmcZ15z7NOcwvrmO5bh49knptS/QJ46br5b8t+1muJ9+TvdFstM6tdazSilLLbyfObz3HNKf8+eTXnf59cs3lNdrzS9rRbB53NXy6DO9TtNw7f582y7VOPbPWOzqKz2X+d3jfWu9Paz8av8V9BQAAAI57MNFscgg7m/evXg8fs+utseGg+HoqjZ3DSTmmFRPa49L59djxvmke8d7NgDf+9mreh8O4GFoW1Vqmc8f7FPuyxqrN9YuXy57U8SjGmc2y3t1hJe7POLcXaX3Ho9mkeo7Pp3WlPTgZzSb1mtOY9GzmcfW6Z/Oci8CUz+X7b0+uf5pP691cnHxm6zsQzm8+l7hP49ymcTv2oxV8q31tjAMAAABmdxvNnrpOMDkLvVAJAAAA8ASJZnfpjKNZ+wsmAAAAgKdJNLtLZxjN1j/T2/VnlQAAAABPhGgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAIFoBgAAAACBaAYAAAAAgWgGAAAAAEE7mv18Mfz9+x/NEwAAAADgMUtdLPWxOppdXg1/vf2teRIAAAAAPGapi6U+VkezD38ON28upgG+OAMAAADgKUgdbApmby7mPlZFsyWcff717fA5fYqW/oYTAAAAAB6x1MFSD8uDWVJGMwAAAABANAMAAACA0ufhX20IfRHg+sMeAAAAAElFTkSuQmCC" InformativeScreenshot="04273f5625e39e1f6eb0130a6ffb93b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New Invoice - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NCheckState.Target>
+                                                  </uix:NCheckState>
+                                                  <uix:NCheckState DisplayName="CHECK DRAFT ERROR" sap:VirtualizedContainerService.HintSize="948.8,1409.6" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Timeout="3" Version="V3">
+                                                    <uix:NCheckState.IfExists>
+                                                      <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="400,706.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ClickType="Single" DisplayName="CLICK ACTION" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_59" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/8270feabc4204a21ba23f25dd1714576" DesignTimeRectangle="1746, 205, 125, 46" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Actions'" FullSelectorArgument="&lt;webctrl aaname='          Actions          ' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Actions          ' parentid='wrapper' tag='A' type='' class='dropdown-toggle main_button more ccfg_button_primary' check:innerText='Actions' /&gt;" Guid="06634876-74ed-4eb3-b382-f3c566a4cb8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAyCAYAAAB7/riLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALPSURBVHhe7ZuxbhQxEIZ5J8SjUFEgEEoKHoIGCVBSkJR5gqupeIETDR1Cui7l9UjXRAJj+/65m/MOuw53dmDn/6VPSjZeO+f5PHtJlEeBcR9KwFACRkuwvg3h4+sQzh6TuXN5tq03spfgw0v7BjJP3j1H4UWCXz9DOH9iDybzJNUb2XcCayCZNwgl8AxCCTyDUALPIJTAMwgl8AxCCTyDUALPIJTAMwgl8AxCCTyDUALPIH0lWGOt9Sf766QvSEcJYuF3+RHCwhpTyTL9LbyYI1+LoWD1IP0kkCJtYvFSVpf2uBosCcj9QTpJEAu+SYvE4h18bI2tgBKcBqSPBIuv2zWkVa/QDZbFOEHG6+TOIQLpiEx43JRzSgfaxZAnr4fr8r1JBt+jfqwhx3S1hwTpI0FZ9FKKwdiySxQFNjuBIYE1l6ytC6el09cH61iiQcz7inDzOYS77XSTWV3bcxwL0kECbNwmbrS+nn9SKAopxRicvoIaCcbmynKo+/PYcr5EjXxHcBXnnxKhZZdB2ksg7bh8MdZ1swsY1EgwNlcpSK0Ecl/OiWQYE6GlAAmkvQT5xFvFwAbrDpHGlh3DokaC0bkwVja5VgJ97SAV4o5hidBagATSVoKDkzOSmtOreahOMCAWSt6oHvv7CS1CDwESSFsJymfvAGyybGBZnD9RI8HYXKUgfy0BqO1gUyQRvnUSIIE0lACnZGpzyseFeYLj5uh5tAQL2TSjYNZcIoc+bbUSpHGD14PX2ev0nhKknQS5ADFTm5MLGqPbqRRKJ/3b1K7A2HhJXsOQICHz72IUu1aCZfw8S1vkfxQggbR/Y0j+XRBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQfYSvH1mDyTz5M1TFF5L8P1LCBev7BvIvHj/YltvZC8B4zQh/AYtB5YAz8XDMQAAAABJRU5ErkJggg==" InformativeScreenshot="9a026d364ab81b35620bbbc98ed37dba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-207 - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NClick ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_60" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/54d34c121e2144b3925b290e47070ffa" DesignTimeRectangle="1633, 922, 235, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl class='i_delete' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='i_delete' parentid='wrapper' tag='A' type='' aaname='Delete' check:innerText='Delete' /&gt;" Guid="70d60003-d818-43d8-80ef-24bc00b6f9be" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAA2CAYAAAAvQc5eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPhSURBVHhe7dy/LzRPAMfx+wf8DUqlqPV0okCUOiqhEIlSQ0OpUAuVTiUSPyLn6w/g7omOXL4NCSFCiHnymWdHxnzH2b3v3hPj3q9kcruzM3MjuY+dXW4rh4eHRgVAOpRZwgskiPACiSK8QKIIL5AowgskivACiSK8QKIIL5AowgskivACiSK8QKIIL5Cotof35ubGLC0tmYGBAVuGh4fN9va2eXl5yVoAaEXbw7u6umpGR0fNzs6O2d/fN1tbW6avr8/s7e1lLQC0orTwvr29mdvbW3N9ff2hLCwsmPX19Q918/Pz/6lTub+/z0YD8JVSwvv6+mpWVlZMV1eXqVQqLZfu7m5zcHCQjQqgmVLCq7Pm0NCQOT09zWqK05l7bW3NLC4uZjUAmiktvGNjY6ZWq2U1rdnY2CC8QE6lhPfh4cFMTEyY2dlZeyNKN6aKFt3Q0o0t3eAC8LVSwiuXl5dmZGTE3kl2fxYqUnp6eszMzIz901IZdBaPXVf39vaaer2etSpOKwNWB/gOSguv6EOt0LTi//SN0ViDg4N2Se87Pj62IZ6cnDSPj49ZbX6thlfvG5sP0Kq2hffu7s5MTU2Zi4sLu69X7atetExeXl622/K3wiuq07FWQkh48V20Lbz6kI6Pj78vUfWqfffhVTs/BH7fMjQLryhMsSW0+vnL7HBOsfDqDK4zuevjjxseU/HP+s36As10bHhVr+P+e2oO4XJadeE8/f3YOK5OvyCc2Jk3b18gpmPD6854bg6fLWvDMKl9OG9/3wnHi42fty8QQ3izOejVn4/PP+Zva2w/2L7wWBjIIn2BmI4NrwuI2oXXnbHi5qpXt62fSdeosfaufBbeIn2BmI4Nr4Lh3xzyQ9mM3879AsgTsjC8RfoCMR0ZXhcc//3DcH1GfcJ5+/ufiY2fty8Q03HhVYi0JA3vKrulc1ivec/Nzb3XhYHTcZ3Bw7lr36/T+7ozveak8fL2BWJ+dHjDa0gVf6kcE/ZT+93dXXN1dWWPh+EVF3y/n/YVWBd6v40/hzx9gZgfG17gpyO8QKIIL5CotoVX12v6bm6j0bD7etW+u46rVqtmc3PTbgvhBYopPbx6lI0eaVPE09OTmZ6eJrxAAaWGVw+P00Pk/DuneUt/f//71wcBfK3U8Ioe36rr2qLl+fk5GwFAHqWHF8DfQXiBRBFeIFGEF0gU4QUSRXiBRBFeIFGEF0gU4QUSRXiBRBFeIFE2vEdHR3aD/y8G0qCs2vBWqyd24/y8Zr+eB+D7UkbPzs7/hPfsrGY3KBRKWqXSaPxr6vVf5uTkn2gDCoXyvYqyWq//Mr8B6wzua3c1BhEAAAAASUVORK5CYII=" InformativeScreenshot="df4f65638daa6a2d16f7a49570c0dcc2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-246 - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NClick ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_61" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/54d34c121e2144b3925b290e47070ffa" DesignTimeRectangle="702, 458, 175, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='save_button ccfg_button_secondary' aaname='Delete' check:innerText='Delete' /&gt;" Guid="84aa60b3-32c9-4cf8-83fd-b5aabfc8bdc7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAwCAYAAABaMEuFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ9SURBVHhe7ZlBaxNBHEf90BVPFe8eBKsUq1W/gBCsAb9BIIfcDaEnKSQe6in0NmZm57fMzs5uNkVK/tn34EGbmdmG5WUySZ85gBOBmOFkqGPe/Pnrrr7+dGfn14gmvLyehm5FHfO7jzfFBYjH7NsP32PBScwvXn0pTkY8Zp+//BwLTmIuTUS0oCBmNK8gZjSvIGY0ryBmNK8gZjSvIGY0ryBmNK8gZjSvIGY0ryBmNK8gZjSvIGbv9M5t433I2d7OymuGGK774FbTwhj+NwUxe2PM60U+tnTrcHceGeSjY67+bvv5YElBzN7OmCvnG3+H7t28MNYrMT+Jgpi9e2JWXK0jx+I+3LuazbI53hHz5PYhLqhIr5uP5e8KfWvHqiBm796Y4+68vXOT+HsVVXO3Do8lc0ox59epH2u8EMo787C141MQs3dAzI14O3bcs/OZW+0uVO+W+bywk5eOK3m8hZgHrx2fgpi9B8bc2oETG2NZzH27aHOsHejwteNTELN3QMwhmBhp+LmPYszVrt1LZ8yHrB2fgpi9e2Ou4tLxoW9nbnjAztz0sJ157Api9u6JudqJk/NqFmmn+bzOc29u4Rw8eO34FMTs7Yy5iqr0T5NW4EE/vy/6eFzId3U/r/FY+k4wc5Owfuja8SmI2RtjLtH7PW7+PfOO9WLp5npRtGKurD5Mpuzm+HXJvHRO+hyGrB2bgpjRvIKY0byCmNG8gpjRvIKY0byCmNG8gpjRvIKY0byCmNG8gpjRvIKY0byCmNG8gpjRvIKY0byijvnN5aQ4EfGYfX3xLRacxPxr9du9//SjuADxGL24ugndijpmAOsQM5wMxAwngnP/AA+IyQoAC7uTAAAAAElFTkSuQmCC" InformativeScreenshot="7eaf8cd164b2da5bd405bc9ee9e5b4b0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-246 - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfExists>
+                                                    <uix:NCheckState.IfNotExists>
+                                                      <Sequence DisplayName="타겟이 나타나지 않음" sap:VirtualizedContainerService.HintSize="400,1181.6" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ClickType="Single" DisplayName="CLICK ACTION" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/8270feabc4204a21ba23f25dd1714576" DesignTimeRectangle="1746, 205, 125, 46" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Actions'" FullSelectorArgument="&lt;webctrl aaname='          Actions          ' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Actions          ' parentid='wrapper' tag='A' type='' class='dropdown-toggle main_button more ccfg_button_primary' check:innerText='Actions' /&gt;" Guid="06634876-74ed-4eb3-b382-f3c566a4cb8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAyCAYAAAB7/riLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALPSURBVHhe7ZuxbhQxEIZ5J8SjUFEgEEoKHoIGCVBSkJR5gqupeIETDR1Cui7l9UjXRAJj+/65m/MOuw53dmDn/6VPSjZeO+f5PHtJlEeBcR9KwFACRkuwvg3h4+sQzh6TuXN5tq03spfgw0v7BjJP3j1H4UWCXz9DOH9iDybzJNUb2XcCayCZNwgl8AxCCTyDUALPIJTAMwgl8AxCCTyDUALPIJTAMwgl8AxCCTyDUALPIH0lWGOt9Sf766QvSEcJYuF3+RHCwhpTyTL9LbyYI1+LoWD1IP0kkCJtYvFSVpf2uBosCcj9QTpJEAu+SYvE4h18bI2tgBKcBqSPBIuv2zWkVa/QDZbFOEHG6+TOIQLpiEx43JRzSgfaxZAnr4fr8r1JBt+jfqwhx3S1hwTpI0FZ9FKKwdiySxQFNjuBIYE1l6ytC6el09cH61iiQcz7inDzOYS77XSTWV3bcxwL0kECbNwmbrS+nn9SKAopxRicvoIaCcbmynKo+/PYcr5EjXxHcBXnnxKhZZdB2ksg7bh8MdZ1swsY1EgwNlcpSK0Ecl/OiWQYE6GlAAmkvQT5xFvFwAbrDpHGlh3DokaC0bkwVja5VgJ97SAV4o5hidBagATSVoKDkzOSmtOreahOMCAWSt6oHvv7CS1CDwESSFsJymfvAGyybGBZnD9RI8HYXKUgfy0BqO1gUyQRvnUSIIE0lACnZGpzyseFeYLj5uh5tAQL2TSjYNZcIoc+bbUSpHGD14PX2ev0nhKknQS5ADFTm5MLGqPbqRRKJ/3b1K7A2HhJXsOQICHz72IUu1aCZfw8S1vkfxQggbR/Y0j+XRBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQSiBZxBK4BmEEngGoQSeQfYSvH1mDyTz5M1TFF5L8P1LCBev7BvIvHj/YltvZC8B4zQh/AYtB5YAz8XDMQAAAABJRU5ErkJggg==" InformativeScreenshot="9a026d364ab81b35620bbbc98ed37dba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-207 - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NClick ClickType="Single" DisplayName="DOWNLOAD PDF" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/8270feabc4204a21ba23f25dd1714576" DesignTimeRectangle="1633, 560, 235, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Download as PDF'" FullSelectorArgument="&lt;webctrl class='i_download_pdf' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='i_download_pdf' parentid='wrapper' tag='A' type='' aaname='Download as PDF' check:innerText='Download as PDF' /&gt;" Guid="c2920a52-30c9-46ac-954b-edfb5cc49b58" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAA2CAYAAAAvQc5eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUjSURBVHhe7Zi9SiRbFIV9Bl/EwFcQDQVBMDcwMBQTAxEzX0Aw1wcQDMRMMBRMhHYCQTAREUQRE3/OZfX04u5Znqpqp7scT7s+KOzadc4+f/ur7pmx4+PjhMsYUw5w1vIaUyCW15hCsbzGFIrlNaZQLK8xhWJ5jSkUy2tMoVheYwrF8hpTKJbXmEKxvMYUiuU1plAsrzGFYnmNKRTLa0yhfJm8b29v6fHxMb2/v/cixphB+DJ5Ly4u0sLCQrq7u+tFjDGDYHmNKRTLa0yhWF5jCmVk5d3d3U1jY2MfromJie5cvhvPz89paWmpO++v5OTkJM3MzHz5SxVngLPIndHm5mav1W9wn2tXNe+q9ryw5lFgpOXNHS4ODgcIUSDMd+GnyqsiYR6YTxQYn3PnxRd0Tvbvdr5t8OPkBbkC+ddY3v9BLP5CqpOReeK+Wd4h853kBVogBAcff2JFwZFT+1A6fRGwqDAOi+n6+ro7p1zuKnmZh31yc2ZfttHcRHNhrH7k1X64VDpt029OzQP0GfevSkY966b2o8KPlRdxPKcsFCAeusbYJxYcC03HQl72QzFpQWuBcizOB+CZiqKxXD/GosC5XOjTJBrmOT093f1LdO5VbTQW0RwRxPCMfZtk1FyW9y85PDxMW1tbHzYOG5yT9+bmJq2srKSrq6teZDigMOuKUgscB59rj3vEKQfaRykQX11d7eZi8TB37KPFpONrH72PIFa3NhDXo2NFqtbdRNyHv8lRJS/3O84Vn3X/IuwT9xsvpdwVXwqlM3R5IePs7Gza2Nj4Y7Nz8rLt2tpaenp66kWHQ1OBa0HjbyyYSHymhYo4YhiPbfr5JtDxec8CRI6qby59xuJlgXJOnCefqyhA15MDbaIAuMcYul6O3Q+xj16aA/eflbeu/agwdHlBTmAcVpS3TXFBk7zxwFUkJRYD+6GA8Rlrwtri+lSIXDHpmLxnASJH1bcEC59zwFgxP+KQgHOI7RWdq8JcnBfAnFUyzoMCah+lbk5Kbv8imqup/ajQirxABcYGs7jbFhc0yYuDjnLgwGMxRuIzSoZ75GCRMI6Y5sJnLaaYJ96z4DGvfr55dR0Eca6fYiGmxHY5cnMHusYI15KbF0F8WPLqWTe1HxVakxdEgc/Ozrrynp+fty4uqJOXxRyLr6qI2TZ+i+AzigP/1s3F0T4WZa6YWOCcA++ZT+8jiHGuGKdJXh0rUrVuUiUC4rl8hPsW9yEyLHmZJ+5TXftRolV5AQWem5tLk5OT3Y1uW1wQCzyCYsFPOj1cFniM52KABaPSMLeOmysm5qYAvI9FyHyxwDWmeQBjcR7sF/NzHXXy5iRjjGPima4Psc/mraJKRqwFa4prB1XtR43W5QUUGBv9FeICHqxeKpyi/bQwAOXQAkGhomD7KSbmYFveR7kAc9bNP9dmZ2fngzwUhu0w3tHRUa1kgOLHfvjVwbnjOT7HNk05PytvzN00Rm6/R5GB5D04OEjr6+vp9fW1F6nm9vY27e3t9SXuw8NDWlxc7P7ENsbkGUhefEu08YbjN0k/b2VjfiqW15hCGUje/f39ND8/ny4vL7vCDes6PT1NU1NTqdPp9EYyxigDyXt/f5+Wl5ez/5kwyDU+Pp62t7fTy8tLbyRjjDKQvMaYf4flNaZQLK8xhWJ5jSkUy2tMoVheYwrF8hpTKJbXmEKxvMYUiuU1plAsrzGFYnmNKRTLa0yhWF5jCsXyGlMof8jb6fzy5ctXAddveY/Tf55MKskpPZM2AAAAAElFTkSuQmCC" InformativeScreenshot="438e1bff7d9cddc59fc0483f0ae2d6b3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-207 - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="WRITE PATH" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_16" InteractionMode="HardwareEvents" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Text="[&quot;[k(home)]&quot;+NAME_desktop+&quot;\INVOICE\&quot;+&quot;Invoice&quot;]" Version="V3">
+                                                          <uix:NTypeInto.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="169, 854, 792, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INV-207'" FullSelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="77b6cdd7-1177-420d-b6c2-151d743a6327" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAxwAAAAaCAYAAAA9tlqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJHSURBVHhe7dy9beswFAbQzJWBMkPG8BiZwGWmMJDCQLo0RipX6fgsypIpiXQk45FFcA5wgUSkfkp+uKSfAgAAQCUCBwAAUM0kcDy9fvzpAgAA2hI4AACAagQOAACgGoEDAACoRuAAAACqWQSO5/efEA5f4yL95dCP7d+WC/jb3K+wL8wZ6+0cwuk7POfGhurmpJLvGCq+c5A+b37v6Cfsdv0cAACgrVWB43g4h2MmLKRz4993AkV8zvtndqyvz7A7ncPL5P/pPfN3xDCUCSVjzUIOAADQ1rrAcVn05wLDZO7uOxyTbsKk4lgaJlbWJDBkuih3n9sHlnQ+AADQ1urAkVvcF+cmc7qaz1tdaeDIhotlqBhr1t3oCgAAaGt94LiOpYFiESTiOYoNoeCX6t49Pj8TIMrPzl8HAADa2hQ4+m1Nt21Ty85FZqGfDQq/V3x2Gl7uBI5FV6Ww1QoAAGhrY+C4VLfwv44vA8f1WhIMltus+rMYN8tgEDsb8+sbOhy57+oKAABoa3vgiIv8vsuRX9gnXZDNh8X7AJELC+vPcORDSFcAAEBbDwSOS3WL/8ucUidhuKc0XqrY2SjOn27nipULIXdCDgAA0NZjgWO4fioEirj96Rz2hU5DtmJQKPys7rXit93drlXquvQFAAC09XDgGM9iZBf3161RWw6Lx8CRMw0hsQsyyLy7/L0CBwAAtLYIHH+5AACAtgQOAACgGoEDAACoRuAAAACqmQQOAACA/0ngAAAAqhE4AACAagQOAACgkhD+AZ0J2vTB31aFAAAAAElFTkSuQmCC" InformativeScreenshot="9112ab6c4faf21ee2ed9912dcf9bc890.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target DesignTimeRectangle="22, 851, 144, 28" ElementType="Text" FriendlyName="'파일 이름'" FullSelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;ctrl name='탐색 창' role='pane' /&gt;&lt;ctrl name='폴더 레이아웃 창' role='pane' /&gt;&lt;ctrl name='세부 정보 창' role='pane' /&gt;&lt;ctrl name='파일 이름:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;ctrl name='탐색 창' role='pane' /&gt;&lt;ctrl name='폴더 레이아웃 창' role='pane' /&gt;&lt;ctrl name='세부 정보 창' role='pane' /&gt;&lt;ctrl name='파일 이름:' role='text' automationid='' check:text='파일 이름:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAgCAYAAAD0Z1G3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJISURBVHhe7ZbbccQgDEVdleuhjHTgYtyLf9OGOyAWXidCEgZ2lU3Gvpk5M1neFgfBsK5rBMALCAVcgVDAheHjc8eqBKAXkon+IBRwAUIBVyAUcAVCAVcgFHDl5kLNMQwhzmZdA3OIwzjFxap7Bu/x/oCLCrXEaRziMJQJM7WrCEUbzPvJze4VIBtvjNNi1Jvj1b/nv4iIDFUQapnGbaPyulTGN65HqCQTGy/9FlL1jMdZpjie9OPrnsMu4H6gjHZhTv+ndk+s5dpCUaD5JqrAl4TaM4IOuihvFsAej29gojjeCxlKjEmijCGYAsr1pLbTkrWpcS+h1Ia9SSi5jlL5qVDGFVlF9zsksWRRgj/xxoRQhYCl4Iq6VMb79whlthPzewtljPctkiG5FkpkqdTnfB33E0qdwJ9rQ6V3as/q1Wa/VSi2DhO90VYW4mUkEK+3hMpiBqFahMpP6a8g11EqbxW0EZJHXtu5ZPT9P4KYQhUPg821hbIyQJdQVG9lA0ZTsMXb64HaQCVUw/yK43vsOVXWYjGBUCUoSGawOXQya0JV6MkoaU1Cbnl99IxXpVEo9j6DUC/zrgz1IBPdeIsUhWp4Qxn9tDx2WZJmE6n6hmoAQlWFeiGD9XIqlCHgQSmLGDKYQh3l2xyn7WmeWz/Kq1xcqLT+vF9JqL3tlukyocT3Q6gaLUKJq0VxHuAunK88wrzGGinLV+bmQt2BXcZeMUimkqRnQCjgCoQCrkAo4AqEAq5AKOAKhAKukFAJqxKAZ4FQwJE1fgGXzV7yBUsRgAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NTypeInto.Target>
+                                                        </uix:NTypeInto>
+                                                        <uix:NClick ClickType="Single" DisplayName="CLICK SAVE" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_24" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="733, 945, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='저장(&amp;amp;S)' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='저장(&amp;amp;S)' check:text='unchecked' /&gt;" Guid="0f74825a-048c-45a9-9db4-a19cd326f1ba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHkSURBVHhe7ZfNdYUgEEbpyW6oJDtboRWryNoO7IA80GeYcQZNcvxh8i3ugjeg53D5Bp+bpimC9oFII0CkEYhI9/EJGoK4IwNhMnguxB0ZLBPGcQQPBiKNAJFGgEgjQKQRINIIJkQOfRedD2KtToje+RjEWls8W2Tw0Tmn8C1AEpl/E9e96Po45HkQeT1DHztl0/cSqdfrIvO6VfoYg6cHwofi92LeHfwLkfpGV0SmbsAlkncMsfe03vVDUb+WdkTmNvsbkUlWSlAX+0Gr8fpLUleO0zxpfUk93WfTjMgsq9hM3uY0kWtSWMJmlM3fzD0i8t5UNiJyToj3cvLkRKY1VDC/8zSRkhB+kETSAVA7w7m0IXJNiLzxW5GzRDEdpEXrIt8fMoS8NnUAIcWJdI9vUn8NDYikbU1Kn5zII0gi50Mgilx4t/XNQYFIDTlZvPXtilyTxBDX7IvM5K9o1mohUkb/eKCbXROZ06NsrlbT31tCO0UGd+Tf0EUKm32kzoWkpLHn53eyQ3DsAJyDcZFL6pSPEz2tStrKtrxZJ92312FeZOZHd+TM7jMZd6YxYULkOVT+wjD0ZF8HRBoBIo0AkUaASCNApBEg0giHRYI2IO7IQJgMngtxVw5Au0CkESDSBFP8AunrOHHGs8P4AAAAAElFTkSuQmCC" InformativeScreenshot="167a70a581a845d3f3d2473f0604d5ed.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NClick ClickType="Single" DisplayName="CLICK SAVE" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_56" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/8270feabc4204a21ba23f25dd1714576" DesignTimeRectangle="309, 206, 116, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Invoices'" FullSelectorArgument="&lt;webctrl aaname='Invoices' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Invoices' parentid='wrapper' tag='A' type='' class='back_button secondary' check:innerText='Invoices' /&gt;" Guid="8965ef3a-49bd-4a15-80ee-6f1242d34155" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAvCAYAAAAo7w6dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANJSURBVHhe7ZxLSytBEIXvv9dNdq5EMCKGCK4EQUTcRFdusnEVwSxUiMEHgkoSsS9nbk4oy8pzZvBOUQc+ZjJT3dPpbzoJRv2TIq4Tgp0nBDvPRPDj42NqNptpbW0tqDB7e3uZS2YieHd312wQVI+dnZ2x1bHgr6+vtL6+bhYH1QMu4XQiGLEKg+rChGCnMCHYKUwIdgoTgp3ChGCnMCHYKUwIdgoTgp3ChGCnMCHYKUwIdgpTumB8S1Wr1cxzQXkwpQq+uLhIw+EwXV9fryS53W6nz8/PdH5+bp4PpsOUJhhyR6NR1vfNzU0lBR8eHqbBYJBeX19To9Ewa/5XmFIEt1qtbGKQbrebNjY2zLp5xApeHaZwwScnJ+nj4yPr8/7+Pm1ubpp1i6AFY4vHOI5XBYY1XHH9fv9HX1iBWIlyNbI/Rt9MbKP7w/VlcE1cW9bI8SF4LM9zrIy+dl6YQgUfHx9P5PZ6vVxywTTBiJwwCKC4aateH6ckbGWNPGYJxr4WirHIG0eOR7ZjP5Qrr20dywNTmOCi5QI8WUuwngRZx4nSK0ZOOsXpGoBjFKgF6/FYoEbfAEAKRHvsz+onL0xhgu/u7rJ+8MHq7OzMrFkWPaHYzhOMx3pF6dUxa4LlOS1Y3iS6HUEN66ed43iQef2tClOYYPwm38PDQ9bX29tbOjo6MuuWYVXBuk6uSqteItsuK5j1s8K+rFqeKwKm0Pfg/f399PT0lPWHwR8cHJh1izJP3LQ6gMkCnEj5coy631jBs0AbRD+3VWEKFQwgmXcmtnhs1S1CHsE4BlGdTufHOUs6Kes9eB6zxrQKTOGCQVGS9YQuI1i+z1krCm0Q2Zc+pgUD7GuBkEIxbAOwzxqM7fn5OTuG/ff392994Bj6lc8hD0wpggFenikZk1Kv1826WWhx2C4qGGDSEV1P5E2A6D4swQD9yaCPq6urb0J5bQZ9o+b09DRdXl6m29vb8Zl/scafB6Y0wQAftF5eXrIfW1rng/JgShUc/B5MCHYKE4KdwoRgpzAh2ClMCHYKE4KdwoRgpzAh2ClMCHYKE4KdwkwEb29vm4VB9dja2hpbFYLx7Qf+iZbVIKgO+EsS+U3WRHDEZ0Kw66T0FxxisYBsVPqqAAAAAElFTkSuQmCC" InformativeScreenshot="eddcb332d901dad56604d0ee39462050.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-207 - fdx' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfNotExists>
+                                                    <uix:NCheckState.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/54d34c121e2144b3925b290e47070ffa" DesignTimeRectangle="374, 623, 76, 44" DesignTimeScaleFactor="1.25" FriendlyName="'draft'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;header&amp;gt;h2&amp;gt;div' parentid='view_invoice' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='view_invoice' tag='DIV' class='statement_status draft' aaname='                                                                                      ' check:innerText='Draft' /&gt;" Guid="702b0a41-74dc-4a6f-b71f-6f5b722d5251" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAwCAYAAACG5f33AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALjSURBVGhD7ZtRa/IwFIa///8v9DoX4piUCQOhIBS8EQpCQRDEQEGoFIRCx/slaU5WbXRddIPpeeG5WJqk+iw9iYL/wLkpLPDGOIGHwwFvb28YDAbMFaIoMq4oTuBkMvEOYLq8vr5aa1bgx8cHhsOhtzPTRbvSzpxAHV9H5jIUFhgIhQUGQmGBgVBYYCAUFhgIhQUGQmGBgVBYYCAUFhgIhQUGQmGBgVBuFpgVdgJf6hpVIZElEYRn7I8yTSHLyr6QJpVMIKJ3zGYzTMeeMd+A8rMCW6lLiXTqn+P+xNge7Y1dauTLARLZSC0y37j+UO4msPuCBKL3BTJZwK2DukD2GxLnsrmnut86Hqs2gVmaIlHX/pDAFupxysliucHU1+eeJFZgkXWu/U2BmukapelZY5+K1rUEzXtSq9OslC0K/XclzYqhfuP5GvtjpUZTdH3dIp215iJxnRTIrbhOPJL7QPk9gYqYCtN+1dpUSGAJKVuFywkUSNS4T3HnqSATO9ejC3Rv8GR1kUCdGqVcIY5aqyrewmitCmyWMSKh21V9jVfIybeScLLLP+QjbMjUWjC91eNKbSSwQr7QBb/dX6NWoNoAZkbcGdGmKQtnj/uTCmy39cXO9zQCrz7ClwUKu4F8Rm0gxwLb9MlWoNtETmrWdYGCZNRHyFWMsW4XEeLlptmtdZ5CoDvG6E340jGm1d8g3PynYyzCzvnwAq8epK8JpGsl1r5N5LFrYN+Pcn1W4Pnh23LDCqzyhSkHQnjm7QHlbgK/yuUvE67XQCej2iMzn2ub9rE6B0pVBM0B+xsCozUVEps6x/KsTx8oPyuw19dZXwhUnO7CtZq2wnG/xnz8/Ud4MJhitae5mn/sMjrv8zWUmwU+KxQWGAiFBQZCYYGBUFhgIBQWGAiFBQZCYYGBUFhgIBQWGAiFBQZCcQJfXl68HZkuo9HIWmsJ3O125mdMvgHMJ/oXXdoVxQnkhIUF3hTgP2pctA/Fr2yUAAAAAElFTkSuQmCC" InformativeScreenshot="7e335823ea93fb3060517916a54af6c2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoice INV-246 - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NCheckState.Target>
+                                                  </uix:NCheckState>
+                                                  <ueab:WriteCellX sap2010:Annotation.AnnotationText="엑셀 내용을 성공적으로 반영하였을 경우 pass 명시&#xA;" Cell="[Excel.Sheet(&quot;Invoice Test&quot;).Cell(&quot;G&quot;+(CurrentIndex+1).ToString)]" DisplayName="PASS " sap:VirtualizedContainerService.HintSize="948.8,213.6" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;P&quot;]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ueab:WriteCellX>
+                                                  <uix:NClick ClickType="Single" DisplayName="CLICK ALL" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_57" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="1278, 560, 125, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'All'" FullSelectorArgument="&lt;webctrl aaname='All' parentid='desk' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='All' parentid='desk' tag='A' type='' class='tab ' check:innerText='All' /&gt;" Guid="ab490903-d93c-4106-95ee-a04001d7faff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAA2CAYAAADgb/qdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE8SURBVHhe7dixdcIwFEDR7KSZzCCexYOYEUijwwZOTfqfb44hNjEDRL7FLQzq/kMS/rjdvoNjEwEiICO4XD6DYxMB8TFNXzF7fPB4pk17cxbBwYgAESACkggQASIgiQARIAKSCBABIiCJABEgApIIEME01Ri6EqWU6Med78c+SjdEXZ7rcIrSn/+u+8dEUIfoMoA5gt3hiqD9CO5DLafo7rtBH+PrGhG0HsE5+nkHmIe87AjdULdrRNB4BPOAn3eB5W6wGvhzjQjajWDst0fA42gY6mqdCBqOYHf7X46H9ZBF0G4Eu7/69Lo7iKDZCH7fDbzzfGcggkYjmAe7HvTGywVRBC1G8OZfwNo6EhE0uhOwIQJEgAhIIkAEiIAkAkSACEgiQASIgCQCRIAISCJABIiAtBtBrdfgyK7xA4qUWZjo7RRUAAAAAElFTkSuQmCC" InformativeScreenshot="da2418e4f8be9331662fb805650dde29.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NGetText DisplayName="CHECK WHAT NUM" sap:VirtualizedContainerService.HintSize="948.8,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c598e3b8-5b29-4a23-a382-d0ca86d9a740" TextString="[GET_num]" Version="V3">
+                                                    <uix:NGetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="375, 561, 6, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' class='' /&gt;" Guid="44107c64-8bd2-4272-82b1-1cc190dee241" InformativeScreenshot="70d24e2e17e19d0d71a49a740cde204f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target DesignTimeRectangle="309, 560, 189, 23" FriendlyName="'Showing 1'" FullSelectorArgument="&lt;webctrl parentid='desk' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='desk' tag='SPAN' type='' class='meta' aaname='Showing  result on  page' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMEAAAAbCAYAAADF5+vVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPoSURBVHhe7ZfbleMgDIa3p1TlSlwMlbiM1DDz7rUEAkkIQ3KczSbo4TtnAlj3H3v+/Pz87o4zMy4CZ3pcBM70uAic6XERONPjInCmx0XgTI+LwJmeSgT3sOy3202wbuzMtu63Jex39sxXAnlC/v9prtindTP33sN9D4sxLx+AEMG2Gk2/h33hib1LBCmOJdzt/SshAXyQCN4riiKADxfBtq8jCXz7m4ALAHARdJACAD5eBN1CkgjSzdxOXBdn3be8F33JW90SIV+Dv5c93ONebroY2rKfqfZjXHajUg0gVsrvRAQ6hmJT5W7YwGdp/4DXwhxojKfUsJzRdTZqwFEi12/W4bry88kOfkkcf9u1BaiHKmada+4DYfg35g/8V18KKl8rtvpzKD/QSJyM8sbiWmfI8UyxWTWa7FZrZNcQgTqPa1VcPI9S/HajEqMi0DE3c2f10b8PoPYUU1UboCmCk2cUMV7uN9VD2+nVtcGYCOCM0ZPsD36r2dP1Sr3hfsg3r3srXy2UoX+Mq4ZWBTEG1CgaBkrJqqbC3hLCYUeuleIYPlijEMNmdSYV4jIRKPtnuVMdW2eIkdz0GfMZQRzAKm+0+1hdW2C9LR8Z2cNM1/74fJVZPctX+qpEIEAFqsQGRCCDYYhn+TCW5+HZuKaH1SjEabNaw/5aEZzmns/GBpmXzMHIIOoz5jOc5qDJeoz4bvG0CFI98nNU+1wfuBzLfqvGYv00XxnDuQiQ1DAqTFcEsah9EaSigV0ImNZpWKokZAH7zVKFzbxSBNE2Na/CsIU2cP+R3Ooz5jMcqGtzKEo9Rny3uEYE8W8+P1SjuN+eLyECzJfVXsFjHBCBctoVQQraaHgeelpLtrbjfEkKbK17qJph+Og0q/KHvFIEjbgG4A0cyU2f6fvlg8ZAu4/VtcXTIuD2TbHK2DHGxnzJObIEV1NEkJRTjPB1ZmxABBS0sKXtsHN63S6m9DHULMMnPlfZNkBbj4uAcpL2QXgyLllnJUyMmw9C3Odr2rcdiyTmbtjt2blUBLqmOgajfqkXeU3/BrBmcuYwF92/qvb6TUCNF6jkwVlXBAA1rmEngYVT9upmAU+IAEjFIZawyYFrQbV4WASAzh38Hm+85HPbgrEvG0MDFTnyPp7huVW+We+0LUFVD3l2uK4GYyKgXEoMtj+2f3zDw29LGNwG+K9yV/nCXIVtEz0d+Bz6NoybxvlHWJflVcSL5/QCaPDdIoDbQt0yeNOd3O7OK7lKBIcd4zOn9bXR46tFcD9ee0F8Vhy4AN7IRSKAvsJlxvv6pACACT+HHEfiInCmx0XgTI+LwJkeF4EzOb/7X7vWQ4HOl6b/AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NGetText.Target>
+                                                  </uix:NGetText>
+                                                  <If Condition="[CInt(GET_num) = 5]" DisplayName="IF CHEKC WHAT NUM IS ZERO" sap:VirtualizedContainerService.HintSize="948.8,644.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Throw DisplayName="THROW" Exception="[New Exception(&quot;강제 종료&quot;)]" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                                        <ui:LogMessage DisplayName="DELETE LOG" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;인보이스 5개 이상시 삭제 시킴&quot;]" />
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </uix:NApplicationCard.Body>
+                                            <uix:NApplicationCard.TargetApp>
+                                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="6bd9c8549f688b47513d3afd0d05e9f9.jpg" Selector="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" Url="https://songminju.invoicely.com/invoices" />
+                                            </uix:NApplicationCard.TargetApp>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NApplicationCard>
+                                        </ActivityAction>
+                                      </ueab:ExcelForEachRowX.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:ExcelForEachRowX>
+                                  </ActivityAction>
+                                </ueab:ExcelApplicationCard.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:ExcelApplicationCard>
+                            </ActivityAction>
+                          </ueab:ExcelProcessScopeX.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ueab:ExcelProcessScopeX>
+                        <Assign sap2010:Annotation.AnnotationText="반복문이 완료 되었을 경우 종료 시키기 위한 변수 " DisplayName="CHECK LOOP FINISH" sap:VirtualizedContainerService.HintSize="1145.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[BOL_check]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Assign>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1211.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Assign DisplayName="BOL CHECK 5" sap:VirtualizedContainerService.HintSize="263.2,69.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[BOL_check]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID2" Condition="[BOL_check]" DisplayName="CHECK INVOICE" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">392.4,536.4</av:Point>
+                        <av:Size x:Key="ShapeSize">95.2,87.2</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">487.59999999999997,580 560,580</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">392.4,580 330,580</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">130,533.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="5. 웹사이트 종료" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Invoices - fdx" sap:VirtualizedContainerService.HintSize="433.6,725.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" InteractionMode="DebuggerApi" ScopeGuid="311a542d-3161-45bb-bbf6-7cce1c0d4d70" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="LOGOUT LOAD" sap:VirtualizedContainerService.HintSize="400,499.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="CLICK LOGOUT" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="311a542d-3161-45bb-bbf6-7cce1c0d4d70" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="9, 187, 263, 83" DesignTimeScaleFactor="1.25" FriendlyName="'fdx'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='wrapper' tag='DIV' class='business dropdown-toggle sb_dropdown open' aaname='                                                                                               ' check:innerText='fdx' /&gt;" Guid="c3e03a2c-3490-459b-bf98-f58082a380d8" ImageBase64="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" InformativeScreenshot="d889ef1cc349a5425d9c55429233f02d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="LOGOUT" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="311a542d-3161-45bb-bbf6-7cce1c0d4d70" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="9, 548, 263, 59" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='wrapper' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="061398a5-6708-4071-af50-97add355d936" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAA/CAYAAAD3ye1dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUrSURBVHhe7dzNTxtHGMfx/kVNW5I257TpSw499MC/gNScGhVFioSEIkXqBQlxipAQB9Qj4lC1QhySQzkgqpIDkVJQ2ig1IazBvLQOwSHwdGZ3vd5dxrsPxk6G5jvSR0Ke2fXa8vPzzNjmvWYT04IgkKdP/waAxPPnGyYbqhJHRRQWz56ty+PHfwJAwhkWjx79IYuLvwFAwhkW1aFhqXzTDwAJwgKACmEBQIWwAKBCWABQISwAqBAWAFQICwAqhAUAFcICgAphAUCFsACgQlgAUCEsAKgQFgBUCAsAKucoLAal+sOwrDv7APTa+QmLn56YK1uTuqsPQM+dn7C4t0ZYAG+R52ExKLXpOdm9bf5OhUV1ak72xliSAG+Sp2ExKNu/rsmRvRjTDhdGU2FxS/79qxF11Nfkxd1Bx/EAus2/sBgYl/3AhkFDDpfnpHYjvj23DFkfmZH9Sj0c93ppklkG0GOehcUdqVdMUDQC2b97Pdvn3LO4LluzT8IZyNEygQH0kldhsbNsZwomKEZyQWEVbHBWTd+xmWEcTDuOO4Poekyr3Hf2v3mTchBfUrq9uucaC3SXP2ExNC+H5r4PF+64+wvCws4w/rH7GNsPpObs74xPYZFcS9vW7rkpET6v0czM2Q/EvAmL2tKOWX6syq6jL1QYFsbYA3ltZxdTjr4OeRMWcUGHLX8tEw+TjWCpP5SddJ8GYQElT8JiVF5uixyvzDj6YmVhEZ+jmy96fVjcl1fRyKQ5lwbpope6HEz0S73S+vvE+FDr3O0fW2tMdL/N5Ur+vM3b7fPIkgan40lY/GzmBCUv1NKw6Je9FXOWLs4CVGGRCYBcSx3nXkbU5chZ1CnJ+Ysfe/ZaCQt0nydhEb0zFr5QFV/3DgsmmJfA0deJ8rBIFVx6TGppED2mNrODJAgUYVG2xMiM04RF9jiWIShzfsJC8UOysLiLZgGnVBoWzVBwFHLm2IJxZcuQ5DyEBd4yT8JiPHwRHy2PO/q0hmU/KNn3OKXSsGgWqKs/3VcwrnTPIpmldHsZEt9GWEDJk7CI9xvO8tFn/NFrY7Z737XwYWbRuw3O+DbCAkrehEVlavVMX6wKi7OxKnsD7v5OlIZFUny5MclsoAt7FlYyzrT8taTuKx1GUQhl7y95PIQFOuBPWJhlRPhVb/uCP2XBr8cF0/YLXR1qFZerxQWXLuR8SxW2+1yKT0NixddiW3aZUnx/J8Oi2Yr3jfAu8ygsjCHzDmzy4tgsR7SBsT4yHx1jCrPq6D8LVViEWjOHZnMWXaYwo4AoX4akpWYyqeYu8NzYzMZnNlias5CwtZ1F4V3nV1hYt6PACH9MNlH06UfrZ+zHwaJsd3H50RuTspMPhCQ8ssUL+Mi/sLBujMuL8OfnptUDOVial/r0uGyNjMru7Ly8XAnidXpDDpd+lA3XOTyTeffONfYLcB74GRaxjbEZ2bfB0LBTjVY7DgNkTrab/+vCe3ZWcZolBOAfr8MCgD8ICwAqhAUAFcICgAphAUCFsACgQlgAUCEsAKhsbASEBYByhAUAFcICgAphAUDFhkW1uklYAChGWABQsUsQwgJAKcICgAphAUDFhsXm5hZhAaCYnVWcCIvVm7fk92tfA0DCGRYL330vv1y5CgAJGxZbWzXCAkAxO6s4ERYD396UvstfZXz0yZexL+TDj63PI5ciH1y6Grn4WeJC6FO50Kf3ft+Vtlzjgf+rM9eArb1UPYbiOm3WbVLHpqZtbTfrPF//Fy9fi8OiJv8BY6hciKK/uy4AAAAASUVORK5CYII=" InformativeScreenshot="5102f16e0968f1a9d68e98e2304accf4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="18f4ef30fa127203cea3f97d41d63c9e.jpg" Selector="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" Url="https://songminju.invoicely.com/invoices" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,309.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[{&quot;chrome&quot;,&quot;EXCEL&quot;}]">
+                            <ui:ForEach.Body>
+                              <ActivityAction x:TypeArguments="x:String">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="STR_wed_name" />
+                                </ActivityAction.Argument>
+                                <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" sap2010:Annotation.AnnotationText="열린 크롬과 엑셀 닫기 " DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,175.2" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="[STR_wed_name]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:KillProcess>
+                              </ActivityAction>
+                            </ui:ForEach.Body>
+                          </ui:ForEach>
+                          <ui:LogMessage sap2010:Annotation.AnnotationText="실행이 끝나는 시간 명시 " DisplayName="FINISH LOG" sap:VirtualizedContainerService.HintSize="433.6,133.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[DateTime.Now.ToString(&quot;yyyy/MM/dd/HH:mm:ss&quot;)]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowStep x:Name="__ReferenceID4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">560,533.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">660,533.6 660,430 540,430</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="4. 5개 이상시 삭제" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="DELETE INVOICE" sap:VirtualizedContainerService.HintSize="433.6,1376" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" InteractionMode="DebuggerApi" ScopeGuid="93e3296b-402f-45fd-89fe-a2cb422699ee" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="DELETE LAOD" sap:VirtualizedContainerService.HintSize="400,1149.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="제일 오래된 INVOICE를 삭제하기 위해 클릭" ClickType="Single" DisplayName="CHECK LAST" sap:VirtualizedContainerService.HintSize="337.6,198.4" sap2010:WorkflowViewState.IdRef="NClick_52" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93e3296b-402f-45fd-89fe-a2cb422699ee" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="333, 812, 16, 16" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="fa40cc43-4ef4-413c-af9d-67ef54ad9545" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACZSURBVDhP7ZQxCsMwDEV7ao8+gn0DdVEHnyIFj75B4iUFQ7L4Cirf0Ekd7JAlkA9/EeJJGr4e27bLmb4QcF0/wsxirRVjTJfRS/SUeV40kPnVGmKMknPuckpJvPfinNPAH2xUpZS2rQKiiKlHdANv4AFdFIjoIZujqrX+BxJRCzqy2SvAQghtGQXEufgamDZiwKbprYHneJcvkyaqIMTU+iAAAAAASUVORK5CYII=" InformativeScreenshot="4ff81f4984cb247032c7aea23bbc81d3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="309, 937, 264, 48" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl parentid='show-per-page-strip' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='show-per-page-strip' tag='DIV' type='' class='left pagination_section' aaname='' check:innerText='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQwAAAA0CAYAAAB/0gbnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVmSURBVHhe7dnfUhppEMbhvSevKLeRO9ncxu4xSMCICkIs/MfCAAaQPU7Oe6ehXh0+OylX+XrSXX3wVFKDVvHz09dB/vj+/QeFEMJrxGCEEF4tBiOE8GpPg3F7ex9CCCJxMPD/EEKAGAyjsPbeSK3h91E9oxeDMZ8vqChmewdqmaeW8Hsrirl43aLpdLbdguo2sL3B4A+Yzea02fzrBr4A0mOWoMMrqdkSLx1VvAW8CdwlDsZkUoifaJmXg0SHV1KzJV46UrwJ3CUOhsdgL13o8EpqtsRLRwpdMRjGoMMrqdkSLx0pdMVgGIMOr6RmS7x0pNAVg2EMOrySmi3x0pFCVwyGMejwSmq2xEtHCl0xGMagwyup2RIvHSl0xWAYgw6vpGZLvHSk0BWDYQw6vJKaLfHSkUJXDIYx6PBKarbES0cKXTEYxqDDK6nZEi8dKXTFYBiDDq+kZku8dKTQFYNhDDq8kpot8dKRQlcMhjHoUHH6iT4cHdHRx7/lxzOQmi3x0pFCVwyGMejIDmMRg/G/eOlIoavWwVhORtTvj2i63L++Xoxp2Lukm2K9d/09tLpyPPcqdGT1dGfxif78YHcw1vM7GvSHdL94FB/PIUfHZrOkyeiS+tcFrfauP9LDeEi9wS3NV9Xrh4eu2gbjYTygk+MGHZ9e0bQSu17cUa/TpEbrnK7nhztoja5cz70KHTn99REjcWZ7MMrzuGg3qdnp0Z3SaOTo2GzWNB2e0nHjmE6/7o/Gw/iSOs0mtc5uso4GumoZjOexGNKkcnfx/APXpdH0sL+hc3flfO5V6NBhezDYen5LZ4qjkauD7zLGgy/CaJR3GXe97KOBLvXBqGMsWM4urbFg6NBhfzDY02i0L+gm050f5OyojsbJcELLp+sYjQa1uiMqMowGulQHo66xYLm6NMeCoUOHj8Fgu9FoUKN9nnU0cndgNJqNJp0M5NE47l4dfDTQpTYYdY4Fy9GlPRYMHTr8DAZbFSPqtvKOhkbHZvON7vsdcTQWNxfUzjAa6FIZjOVPx2KsfisvPfYWms+9Ch06fA0GW00xGuXLkwx/09Dq2KwxGruXJ9W/acyfRuNwL0/QpTAYZcD1ObW2a/hPZQ358K7odDsk+++U5HDoLs3nXoUOHf4GY7Oa06j7mRrNLzSYHH7o1TpKu3dIGtQ6u6XF+vk63/lu3x1q9+j+Yf9z3gpdCoPB1jT9untbaP8WqvJSJcPrrqocXVrPvQodOpwNRjkW12efqdnsUO/uG62lj3knlY7Sz7738DK5eeCXXehSGgxW72jk6tIeDXTocDQYCmPBsneUtMeCoUtxMFh9o5GzS3M00OGV1PxuSmPBsnaU6hgLhi7lwWD1jEbuLq3RQIdXUvO7KI4Fy9ZRqmssGLpqGAymPxoaXRqjgQ6vpOY3Ux4LlqWjVOdYMHTVNBiMR6NLLQ5N3t7afnFa5SHfL/euv4dWV47nXoUOr6Tmt1pNBtQpz6KvNBYsR8dm/VAOX5taL34RPVJR/uLd/gxlHAuGrhoHQ5eXLnR4JTVb4qUjha4YDGPQ4ZXUbImXjhS6YjCMQYdXUrMlXjpS6IrBMAYdXknNlnjpSKErBsMYdHglNVvipSOFrhgMY9DhldRsiZeOFLpiMIxBh1dSsyVeOlLoisEwBh1eSc2WeOlIoSsGwxh0eCU1W+KlI4WuGAxj0OGV1GyJl44UusTBmEwK8ZMs83KQ6PBKarbES0eKN4G7xMGYzRZUFDPxE63ycpDVQ/PGy/l46KjiLeBNqH7v7Q0G/8sfMJ3uVsUDjpauW4Sz8kZqtcjT99p0uhsLnA/O6sXfMEIIIfViMEII4dd+0H/2nx5S5YlKWQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="" ClickType="Single" DisplayName="DELETE " sap:VirtualizedContainerService.HintSize="337.6,198.4" sap2010:WorkflowViewState.IdRef="NClick_53" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93e3296b-402f-45fd-89fe-a2cb422699ee" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/list/all/client:/profile:/search:/page:" DesignTimeRectangle="552, 453, 68, 44" DesignTimeScaleFactor="1.25" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl idx='2' isleaf='1' parentid='options-strip' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='options-strip' tag='DIV' class='button default dropdown-toggle tipr active' aaname='' /&gt;" Guid="1d26ead2-13c2-49c7-8dd0-431296cd8be0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAwCAYAAACynDzrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIhSURBVGhD7dtRa6NAFIbh/v9/INIiCdKlWEJKEYaWXOxSsqSUJJBGTMRmaRMslPSivf/WaTGNOuYIq+MWz8VzdxwyL1EjxKO3t3ewYhyIwIEIu0AvL1sEQQjP81trsQiw3b6qA7U9TkJ2UAZKBqIoij23UtKACKQ+uA04EIEDETgQgQMROBCBAxE4EIEDETgQgQMRGgp0h55hwNg5gTtTzTWvmUC+QCcVyIAzUsz9B/QEml7DufyFabhBtF5g6FipOJJpC4zDePbRw0ico/czUK+lmYZA93CtdIxyznCzUq2nV+2B/KuuYvPlmM4tHhVr6lRzoOzFOHGCUzFBuJYzT5gPe7CUczYGy+ya0gYzUSL88TmG8rTNHV9ezYFi4R36mVPMcu9zc6ubs9SMcfwDYvonN7dvfihSHGdUwSlafyBpOYC9+/BFt/TfcPY2WPaupoxUURxJT6DUbb3aQFIqUoVxpPoDhRO49tfGpVKnWHz9cccPubkiH5EqjiPVHGiCvrm/6UTZi7QFMc+uqVfNgf7tNm/YAywVa+pUe6Ao8iA6is2TuhC+aj29NASKjS9x6giM5k+fjxr9LsxMELNzgaG/wXr1+ajhXHnqtTTTEyhreZ17WLUH5S/IOjUTKPcL20R/rJprXkOBvg8OROBABA5E4EAEDkTgQAQOROBABA5E4EAEDnRQdDiQ7we7gTYr/CM5v4rgf3xJCl9FYCrv+AvO2H6hTu4BXgAAAABJRU5ErkJggg==" InformativeScreenshot="b509ab2808de136b86a9f78663c7eefa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.PointOffset>
+                                          <uix:PointOffset X="3" Y="3" />
+                                        </uix:TargetAnchorable.PointOffset>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="DELETE" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_54" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93e3296b-402f-45fd-89fe-a2cb422699ee" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices/list/all/client:/profile:/search:/page:" DesignTimeRectangle="554, 608, 195, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' class='permission_delete' idx='2' parentid='options-strip' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' class='permission_delete' type='' parentid='options-strip' tag='A' check:innerText='Delete' /&gt;" Guid="acfe0f3e-8b93-419f-baa7-9da4530af612" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAA2CAYAAABzy416AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAILSURBVHhe7dhBjoIwAEZhbsixOArnwA0eQU/AGVx1SluklP6kEsBkfF9CMgMUXfTZatV1nRkPALOxCeIAMogDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEIgDEA6IozdNVZkqdzR9uGeHoTV1VZt2CP8DFzssjno1iwfT1j6SXY3sjsO/7vr9AJ85MQ5vaGsbyI5JThz4stPjmCbreouVbscaeyai4uibaIw94uem1+yxeNmtsUDigjim1SOa/G7iJxM3jSETx+o5ljtXtzbBSX7lKBsLzC6Jw39iTxNdb3sWk7UgFi99Xub5xWOB2fVxyIlqxdeS+7Y+5ZfX1hO+fCwwuyQONwGnLU3me8HyyMfRN7l7o2MjjvKxwOyCOPxkfX/53Vo5Yh+sHEufrRyAcnocftWIYyjc56cRlUaVe37xWGB2YhxhxbDXVr+Yhq1Ven7c/rzPZSa03x4lP/m614/PxSvVYIYwvmwsMDssjsUefjpWVcQy4+z9fR/GqE/7zHeWxo6ZhjnxPfF7KBkLBAfEAfxPxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEIxAEILo7b7eb+eL1e4TTw28YWXBz3+9398Xw+CQQ/b2zg8XjYJjrzByiIBtCymwo4AAAAAElFTkSuQmCC" InformativeScreenshot="b1e6c360485d20f54825a51d7a732446.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="DELETE" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_55" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="93e3296b-402f-45fd-89fe-a2cb422699ee" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://songminju.invoicely.com/invoices" DesignTimeRectangle="702, 401, 175, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='save_button ccfg_button_secondary' aaname='Delete' check:innerText='Delete' /&gt;" Guid="596595d6-f702-4cb2-8f32-e7e21915a823" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAwCAYAAABaMEuFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ9SURBVHhe7ZlBaxNBHEf90BVPFe8eBKsUq1W/gBCsAb9BIIfcDaEnKSQe6in0NmZm57fMzs5uNkVK/tn34EGbmdmG5WUySZ85gBOBmOFkIGY4GeqYN3/+uquvP93Z+TWiCS+vp6FbUcf87uNNcQHiMfv2w/dYcBLzi1dfipMRj9nnLz/HgpOYSxMRLSiIGc0riBnNK4gZzSuIGc0riBnNK4gZzSuIGc0riBnNK4gZzSuIGc0riBnNK4jZO71z23gfcra3s/KaIYbrPrjVtDCG/01BzN4Y83qRjy3dOtydRwb56Jirv9t+PlhSELO3M+bK+cbfoXs3L4z1SsxPoiBm756YFVfryLG4D/euZrNsjnfEPLl9iAsq0uvmY/m7Qt/asSqI2bs35rg7b+/cJP5eRdXcrcNjyZxSzPl16scaL4Tyzjxs7fgUxOwdEHMj3o4d9+x85la7C9W7ZT4v7OSl40oebyHmwWvHpyBm74Ext3bgxMZYFnPfLtocawc6fO34FMTsHRBzCCZGGn7uoxhztWv30hnzIWvHpyBm796Yq7h0fOjbmRsesDM3PWxnHruCmL17Yq524uS8mkXaaT6v89ybWzgHD147PgUxeztjrqIq/dOkFXjQz++LPh4X8l3dz2s8lr4TzNwkrB+6dnwKYvbGmEv0fo+bf8+8Y71YurleFK2YK6sPkym7OX5dMi+dkz6HIWvHpiBmNK8gZjSvIGY0ryBmNK8gZjSvIGY0ryBmNK8gZjSvIGY0ryBmNK8gZjSvIGY0ryBmNK8gZjSvqGN+czkpTkQ8Zl9ffIsFJzH/Wv127z/9KC5APEYvrm5Ct6KOGcA6xAwngnP/ABJnyQqhIZ20AAAAAElFTkSuQmCC" InformativeScreenshot="45f8858c24b90becdb2ab7ef874147b3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;5개 이상시 삭제&quot;]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b440b1c5129498dc25f753d7bd8a894f.jpg" Selector="&lt;html app='chrome.exe' title='Invoices - fdx' /&gt;" Url="https://songminju.invoicely.com/invoices" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID0</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <FlowStep x:Name="__ReferenceID6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">320,143.6</av:Point>
+            <av:Size x:Key="ShapeSize">200,92.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">420,236.39999999999998 420,266.4 425.20000000000005,266.4</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="폴더 체크 " sap:VirtualizedContainerService.HintSize="400,609.6" sap2010:WorkflowViewState.IdRef="Sequence_70">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="시작 시간 명시 &#xA;" DisplayName="LOG" sap:VirtualizedContainerService.HintSize="337.6,146.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[DateTime.Now.ToString(&quot;yyyy/MM/dd/HH:mm:ss&quot;)]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <ui:GetEnvironmentFolder sap2010:Annotation.AnnotationText="다른 곳에서도 열 수 있도록 환경변수 설정 &#xA;" DisplayName="GET ENVIRONMENT FOLDER" FolderPath="[NAME_desktop]" sap:VirtualizedContainerService.HintSize="337.6,116" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_2" SpecialFolder="Desktop">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:GetEnvironmentFolder>
+          <ui:FolderExistsX DisplayName="Folder Exists" Exists="[CHECK_folder]" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[NAME_desktop+&quot;\INVOICE&quot;]" />
+        </Sequence>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID8" Condition="[CHECK_folder]" DisplayName="CHECK FOLDER" sap:VirtualizedContainerService.HintSize="91.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID5}">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">379.6,266.4</av:Point>
+                <av:Size x:Key="ShapeSize">91.2,87.2</av:Size>
+                <av:PointCollection x:Key="FalseConnector">470.8,310 530,310</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">379.6,310 290,310</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.False>
+              <FlowStep x:Name="__ReferenceID7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">530,278.8</av:Point>
+                    <av:Size x:Key="ShapeSize">200,62.4</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">630,278.8 630,190 520,190</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="폴더 만들기" sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[NAME_desktop+&quot;\INVOICE&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CreateDirectory>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID6</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
